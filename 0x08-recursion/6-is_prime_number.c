@@ -20,7 +20,8 @@ int is_prime_number(int n)
 /**
  * primenum - check number is prime or not
  *
- * @num: number para
+ * @n: number para
+ * @i: number para
  *
  * Return: 1 or 0
  */
@@ -32,4 +33,4 @@ int primenum(int n, int i)
 	if (n % i == 0 && i > 0)
 		return (0);
 	return (primenum(n, i - 1));
-}  
+}
