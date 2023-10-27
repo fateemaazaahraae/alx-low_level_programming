@@ -2,8 +2,8 @@
 
 /**
  * main - entry of the program
- * @argc: the number of the command line arguments
- * @argv: command line arguments
+ * @ac: the number of the command line arguments
+ * @av: command line arguments
  * Return: always 0 (success)
  */
 
