@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 
-/** 
+/**
  * ft_strlen - calculate the length of a string
  * @s: string
  *
@@ -47,19 +47,25 @@ char	*ft_strcpy(char *dest, char *src)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog;
+
 	if (!name || age < 0 || !owner)
 		return (NULL);
+
 	dog = (dog_t *)malloc(sizeof(dog_t));
 	if (!dog)
 		return (NULL);
+
 	dog->name = malloc(sizeof(char) * (ft_strlen(name) + 1));
 	if (!dog->name)
 		return (NULL);
 	dog->name = ft_strcpy(dog->name, name);
+
 	dog->age = age;
+
 	dog->owner = malloc(sizeof(char) * (ft_strlen(owner) + 1));
 	if (!dog->owner)
 		return (NULL);
 	dog->owner = ft_strcpy(dog->owner, owner);
+
 	return (dog);
 }
